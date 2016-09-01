@@ -29,6 +29,9 @@ import net.smert.jreactphysics3d.mathematics.Matrix3x3;
 import net.smert.jreactphysics3d.mathematics.Transform;
 import net.smert.jreactphysics3d.mathematics.Vector3;
 
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
+
 /**
  * This abstract class represents the collision shape associated with a body that is used during the narrow-phase
  * collision detection.

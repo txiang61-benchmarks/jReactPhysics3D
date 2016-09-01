@@ -25,6 +25,8 @@
 package net.smert.jreactphysics3d.engine;
 
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * Represents an impulse that we can apply to bodies in the contact or constraint solver.
@@ -34,16 +36,16 @@ import net.smert.jreactphysics3d.mathematics.Vector3;
 public class Impulse {
 
     // Angular impulse applied to the first body
-    private final Vector3 angularImpulseBody1;
+    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 angularImpulseBody1;
 
     // Angular impulse applied to the second body
-    private final Vector3 angularImpulseBody2;
+    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 angularImpulseBody2;
 
     // Linear impulse applied to the first body
-    private final Vector3 linearImpulseBody1;
+    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 linearImpulseBody1;
 
     // Linear impulse applied to the second body
-    private final Vector3 linearImpulseBody2;
+    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 linearImpulseBody2;
 
     // Constructor
     public Impulse(Vector3 initLinearImpulseBody1, Vector3 initAngularImpulseBody1,

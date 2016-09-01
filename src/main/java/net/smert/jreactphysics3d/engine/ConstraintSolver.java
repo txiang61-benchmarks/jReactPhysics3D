@@ -30,6 +30,8 @@ import net.smert.jreactphysics3d.body.RigidBody;
 import net.smert.jreactphysics3d.constraint.Joint;
 import net.smert.jreactphysics3d.mathematics.Quaternion;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents the constraint solver that is used to solve constraints between the rigid bodies. The
@@ -105,7 +107,7 @@ public class ConstraintSolver {
     private final ConstraintSolverData mConstraintSolverData;
 
     // Reference to the array of bodies positions (for position error correction)
-    private final List<Vector3> positions;
+    private final List<@Ontology(values={OntologyValue.POSITION_3D}) Vector3> positions;
 
     // Reference to the array of bodies orientations (for position error correction)
     private final List<Quaternion> orientations;
@@ -116,11 +118,11 @@ public class ConstraintSolver {
 
     // Array of constrained angular velocities (state of the angular velocities
     // after solving the constraints)
-    private Vector3[] angularVelocities;
+    private @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] angularVelocities;
 
     // Array of constrained linear velocities (state of the linear velocities
     // after solving the constraints)
-    private Vector3[] linearVelocities;
+    private @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] linearVelocities;
 
     // Constructor
     public ConstraintSolver(List<Vector3> positions, List<Quaternion> orientations, Map<RigidBody, Integer> mapBodyToVelocityIndex) {

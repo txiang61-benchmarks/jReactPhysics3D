@@ -32,6 +32,8 @@ import java.util.Map;
 import net.smert.jreactphysics3d.configuration.Defaults;
 import net.smert.jreactphysics3d.mathematics.Matrix3x3;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents a convex mesh shape. In order to create a convex mesh shape, you need to indicate the
@@ -57,13 +59,13 @@ public class ConvexMeshShape extends CollisionShape {
     private int cachedSupportVertex;
 
     // Array with the vertices of the mesh
-    private final List<Vector3> vertices;
+    private final List<@Ontology(values={OntologyValue.POSITION_3D}) Vector3> vertices;
 
     // Mesh maximum bounds in the three local x, y and z directions
-    private final Vector3 maxBounds;
+    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 maxBounds;
 
     // Mesh minimum bounds in the three local x, y and z directions
-    private final Vector3 minBounds;
+    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 minBounds;
 
     // Adjacency list representing the edges of the mesh
     private final Map<Integer, List<Integer>> edgesAdjacencyList;

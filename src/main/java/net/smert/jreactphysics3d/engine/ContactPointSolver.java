@@ -26,6 +26,8 @@ package net.smert.jreactphysics3d.engine;
 
 import net.smert.jreactphysics3d.constraint.ContactPoint;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * Contact solver internal data structure that to store all the information relative to a contact point
@@ -68,25 +70,25 @@ public class ContactPointSolver {
     public ContactPoint externalContact;
 
     // First friction vector in the tangent plane
-    public final Vector3 frictionVector1 = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector1 = new Vector3();
 
     // Second friction vector in the tangent plane
-    public final Vector3 frictionVector2 = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector2 = new Vector3();
 
     // Normal vector of the contact
     public final Vector3 normal = new Vector3();
 
     // Old first friction vector in the tangent plane
-    public final Vector3 oldFrictionVector1 = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 oldFrictionVector1 = new Vector3();
 
     // Old second friction vector in the tangent plane
-    public final Vector3 oldFrictionVector2 = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 oldFrictionVector2 = new Vector3();
 
     // Vector from the body 1 center to the contact point
-    public final Vector3 r1 = new Vector3();
+    public final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 r1 = new Vector3();
 
     // Vector from the body 2 center to the contact point
-    public final Vector3 r2 = new Vector3();
+    public final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 r2 = new Vector3();
 
     // Cross product of r1 with the contact normal
     public final Vector3 r1CrossN = new Vector3();

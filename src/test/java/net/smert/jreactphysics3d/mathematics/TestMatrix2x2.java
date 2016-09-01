@@ -28,6 +28,9 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
 
+import net.smert.jreactphysics3d.mathematics.Matrix2x2;
+import net.smert.jreactphysics3d.mathematics.Vector2;
+
 /**
  * Unit test for the Matrix2x2 class
  *

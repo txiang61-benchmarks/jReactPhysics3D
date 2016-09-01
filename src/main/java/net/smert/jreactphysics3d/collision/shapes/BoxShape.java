@@ -26,6 +26,8 @@ package net.smert.jreactphysics3d.collision.shapes;
 
 import net.smert.jreactphysics3d.mathematics.Matrix3x3;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents a 3D box shape. Those axis are unit length. The three extents are half-widths of the box along
@@ -41,7 +43,7 @@ import net.smert.jreactphysics3d.mathematics.Vector3;
 public class BoxShape extends CollisionShape {
 
     // Extent sizes of the box in the x, y and z direction
-    private final Vector3 extent;
+    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 extent;
 
     // Constructor
     public BoxShape(Vector3 extent, float margin) {

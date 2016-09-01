@@ -25,6 +25,8 @@
 package net.smert.jreactphysics3d.collision.shapes;
 
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents a bounding volume of type "Axis Aligned Bounding Box". It's a box where all the edges are
@@ -36,10 +38,10 @@ import net.smert.jreactphysics3d.mathematics.Vector3;
 public class AABB {
 
     // Maximum world coordinates of the AABB on the x,y and z axis
-    private final Vector3 mMaxCoordinates;
+    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 mMaxCoordinates;
 
     // Minimum world coordinates of the AABB on the x,y and z axis
-    private final Vector3 mMinCoordinates;
+    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 mMinCoordinates;
 
     // Constructor
     public AABB() {

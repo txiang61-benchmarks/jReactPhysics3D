@@ -31,6 +31,8 @@ import net.smert.jreactphysics3d.constraint.ContactPoint;
 import net.smert.jreactphysics3d.mathematics.Mathematics;
 import net.smert.jreactphysics3d.mathematics.Matrix3x3;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents the contact solver that is used to solve rigid bodies contacts. The constraint solver is based
@@ -128,16 +130,16 @@ public class ContactSolver {
     private final Map<RigidBody, Integer> mMapBodyToConstrainedVelocityIndex;
 
     // Split angular velocities for the position contact solver (split impulse)
-    private Vector3[] splitAngularVelocities;
+    private @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] splitAngularVelocities;
 
     // Split linear velocities for the position contact solver (split impulse)
-    private Vector3[] splitLinearVelocities;
+    private @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] splitLinearVelocities;
 
     // Array of linear velocities
-    private Vector3[] mLinearVelocities;
+    private@Ontology(values={OntologyValue.VELOCITY_3D})  Vector3[] mLinearVelocities;
 
     // Array of angular velocities
-    private Vector3[] mAngularVelocities;
+    private @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] mAngularVelocities;
 
     // Constructor
     public ContactSolver(Map<RigidBody, Integer> mapBodyToVelocityIndex) {

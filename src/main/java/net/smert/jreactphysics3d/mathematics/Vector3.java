@@ -25,6 +25,7 @@
 package net.smert.jreactphysics3d.mathematics;
 
 import net.smert.jreactphysics3d.configuration.Defaults;
+import ontology.qual.PolyOntology;
 
 /**
  * This class represents a 3D vector.
@@ -117,7 +118,7 @@ public class Vector3 {
     }
 
     // Return the corresponding absolute value vector
-    public Vector3 abs() {
+    public @PolyOntology Vector3 abs(@PolyOntology Vector3 this) {
         x = Math.abs(x);
         y = Math.abs(y);
         z = Math.abs(z);
@@ -125,7 +126,7 @@ public class Vector3 {
     }
 
     // Overloaded operator for addition with assignment
-    public Vector3 add(Vector3 vector) {
+    public @PolyOntology Vector3 add(@PolyOntology Vector3 this, @PolyOntology Vector3 vector) {
         x += vector.x;
         y += vector.y;
         z += vector.z;
@@ -133,7 +134,7 @@ public class Vector3 {
     }
 
     // Cross product of two vectors (public)
-    public Vector3 cross(Vector3 vector) {
+    public @PolyOntology Vector3 cross(@PolyOntology Vector3 this, @PolyOntology Vector3 vector) {
         return set(
                 y * vector.z - z * vector.y,
                 z * vector.x - x * vector.z,
@@ -141,7 +142,7 @@ public class Vector3 {
     }
 
     // Overloaded operator for division by a number with assignment
-    public Vector3 divide(float number) {
+    public @PolyOntology Vector3 divide(@PolyOntology Vector3 this, float number) {
         assert (number > Defaults.MACHINE_EPSILON);
         x /= number;
         y /= number;
@@ -150,7 +151,7 @@ public class Vector3 {
     }
 
     // Overloaded operator for the negative of a vector
-    public Vector3 invert() {
+    public @PolyOntology Vector3 invert(@PolyOntology Vector3 this) {
         x = -x;
         y = -y;
         z = -z;
@@ -158,7 +159,7 @@ public class Vector3 {
     }
 
     // Overloaded operator for multiplication with a number with assignment
-    public Vector3 multiply(float number) {
+    public @PolyOntology Vector3 multiply(@PolyOntology Vector3 this, float number) {
         x *= number;
         y *= number;
         z *= number;
@@ -166,7 +167,7 @@ public class Vector3 {
     }
 
     // Normalize the vector
-    public Vector3 normalize() {
+    public @PolyOntology Vector3 normalize(@PolyOntology Vector3 this) {
         float len = length();
         assert (len > Defaults.MACHINE_EPSILON);
         float lenInv = 1.0f / len;
@@ -177,7 +178,7 @@ public class Vector3 {
     }
 
     // Set all the values of the vector
-    public final Vector3 set(float x, float y, float z) {
+    public final @PolyOntology Vector3 set(@PolyOntology Vector3 this, float x, float y, float z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -185,7 +186,8 @@ public class Vector3 {
     }
 
     // Assignment operator
-    public final Vector3 set(Vector3 vector) {
+    // add a PolyOntology? e.g. @PolyOn Vector3 set(Vector3 vector)
+    public final @PolyOntology Vector3 set(@PolyOntology Vector3 this, Vector3 vector) {
         x = vector.x;
         y = vector.y;
         z = vector.z;
@@ -193,7 +195,7 @@ public class Vector3 {
     }
 
     // Return one unit orthogonal vector of the current vector
-    public Vector3 setUnitOrthogonal() {
+    public @PolyOntology Vector3 setUnitOrthogonal(@PolyOntology Vector3 this) {
 
         float len, lenInv;
 
@@ -218,23 +220,23 @@ public class Vector3 {
         return this;
     }
 
-    public Vector3 setX(float x) {
+    public @PolyOntology Vector3 setX(@PolyOntology Vector3 this, float x) {
         this.x = x;
         return this;
     }
 
-    public Vector3 setY(float y) {
+    public @PolyOntology Vector3 setY(@PolyOntology Vector3 this, float y) {
         this.y = y;
         return this;
     }
 
-    public Vector3 setZ(float z) {
+    public @PolyOntology Vector3 setZ(@PolyOntology Vector3 this, float z) {
         this.z = z;
         return this;
     }
 
     // Overloaded operator for substraction with assignment
-    public Vector3 subtract(Vector3 vector) {
+    public @PolyOntology Vector3 subtract(@PolyOntology Vector3 this, @PolyOntology Vector3 vector) {
         x -= vector.x;
         y -= vector.y;
         z -= vector.z;
@@ -242,7 +244,7 @@ public class Vector3 {
     }
 
     // Set the vector to zero
-    public final Vector3 zero() {
+    public final @PolyOntology Vector3 zero(@PolyOntology Vector3 this) {
         x = 0.0f;
         y = 0.0f;
         z = 0.0f;

@@ -29,6 +29,8 @@ import net.smert.jreactphysics3d.configuration.Defaults;
 import net.smert.jreactphysics3d.constraint.ContactPoint;
 import net.smert.jreactphysics3d.mathematics.Transform;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents the set of contact points between two bodies. The contact manifold is implemented in a way to
@@ -71,10 +73,10 @@ public class ContactManifold {
     private final ContactPoint[] contactPoints = new ContactPoint[MAX_CONTACT_POINTS_IN_MANIFOLD];
 
     // First friction vector of the contact manifold
-    private final Vector3 frictionVector1 = new Vector3();
+    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector1 = new Vector3();
 
     // Second friction vector of the contact manifold
-    private final Vector3 frictionVector2 = new Vector3();
+    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector2 = new Vector3();
 
     // Constructor
     public ContactManifold(CollisionBody body1, CollisionBody body2) {

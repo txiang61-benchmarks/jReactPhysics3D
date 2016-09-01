@@ -56,6 +56,8 @@ import net.smert.jreactphysics3d.mathematics.Matrix3x3;
 import net.smert.jreactphysics3d.mathematics.Quaternion;
 import net.smert.jreactphysics3d.mathematics.Transform;
 import net.smert.jreactphysics3d.mathematics.Vector3;
+import ontology.qual.Ontology;
+import ontology.qual.OntologyValue;
 
 /**
  * This class represents a dynamics world. This class inherits from the CollisionWorld class. In a dynamics world,
@@ -131,21 +133,21 @@ public class DynamicsWorld extends CollisionWorld {
     protected Timer timer;
 
     // Gravity vector of the world
-    protected Vector3 gravity;
+    protected @Ontology(values={OntologyValue.FORCE_3D}) Vector3 gravity;
 
     // Array of constrained angular velocities (state of the angular velocities
     // after solving the constraints)
-    protected Vector3[] constrainedAngularVelocities;
+    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] constrainedAngularVelocities;
 
     // Array of constrained linear velocities (state of the linear velocities
     // after solving the constraints)
-    protected Vector3[] constrainedLinearVelocities;
+    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] constrainedLinearVelocities;
 
     // Split angular velocities for the position contact solver (split impulse)
-    protected Vector3[] splitAngularVelocities;
+    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] splitAngularVelocities;
 
     // Split linear velocities for the position contact solver (split impulse)
-    protected Vector3[] splitLinearVelocities;
+    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] splitLinearVelocities;
 
     // Constructor
     public DynamicsWorld(Vector3 gravity, float timeStep) {
