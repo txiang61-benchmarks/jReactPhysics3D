@@ -134,7 +134,7 @@ public class Vector3 {
     }
 
     // Cross product of two vectors (public)
-    public @PolyOntology Vector3 cross(@PolyOntology Vector3 this, @PolyOntology Vector3 vector) {
+    public Vector3 cross(Vector3 this, Vector3 vector) {
         return set(
                 y * vector.z - z * vector.y,
                 z * vector.x - x * vector.z,
@@ -142,7 +142,7 @@ public class Vector3 {
     }
 
     // Overloaded operator for division by a number with assignment
-    public @PolyOntology Vector3 divide(@PolyOntology Vector3 this, float number) {
+    public Vector3 divide(Vector3 this, float number) {
         assert (number > Defaults.MACHINE_EPSILON);
         x /= number;
         y /= number;
@@ -159,7 +159,7 @@ public class Vector3 {
     }
 
     // Overloaded operator for multiplication with a number with assignment
-    public @PolyOntology Vector3 multiply(@PolyOntology Vector3 this, float number) {
+    public Vector3 multiply(Vector3 this, float number) {
         x *= number;
         y *= number;
         z *= number;
@@ -167,7 +167,7 @@ public class Vector3 {
     }
 
     // Normalize the vector
-    public @PolyOntology Vector3 normalize(@PolyOntology Vector3 this) {
+    public Vector3 normalize(Vector3 this) {
         float len = length();
         assert (len > Defaults.MACHINE_EPSILON);
         float lenInv = 1.0f / len;
@@ -187,7 +187,7 @@ public class Vector3 {
 
     // Assignment operator
     // add a PolyOntology? e.g. @PolyOn Vector3 set(Vector3 vector)
-    public final @PolyOntology Vector3 set(@PolyOntology Vector3 this, Vector3 vector) {
+    public final @PolyOntology Vector3 set(Vector3 this, @PolyOntology Vector3 vector) {
         x = vector.x;
         y = vector.y;
         z = vector.z;
