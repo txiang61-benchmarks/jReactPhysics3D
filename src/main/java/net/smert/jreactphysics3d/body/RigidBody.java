@@ -62,16 +62,16 @@ public class RigidBody extends CollisionBody {
     protected JointListElement jointsList;
 
     // Angular velocity of the body
-    protected final @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3 angularVelocity;
+    protected final @Ontology(values={OntologyValue.VELOCITY}) Vector3 angularVelocity;
 
     // Linear velocity of the body
-    protected final @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3 linearVelocity;
+    protected final @Ontology(values={OntologyValue.VELOCITY}) Vector3 linearVelocity;
 
     // Current external force on the body
-    protected final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 externalForce;
+    protected final @Ontology(values={OntologyValue.FORCE}) Vector3 externalForce;
 
     // Current external torque on the body
-    protected final @Ontology(values={OntologyValue.TORQUE_3D}) Vector3 externalTorque;
+    protected final @Ontology(values={OntologyValue.TORQUE}) Vector3 externalTorque;
 
     // Material properties of the rigid body
     protected final Material material;

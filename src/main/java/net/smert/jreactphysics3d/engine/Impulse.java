@@ -36,16 +36,16 @@ import ontology.qual.OntologyValue;
 public class Impulse {
 
     // Angular impulse applied to the first body
-    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 angularImpulseBody1;
+    private final @Ontology(values={OntologyValue.FORCE}) Vector3 angularImpulseBody1;
 
     // Angular impulse applied to the second body
-    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 angularImpulseBody2;
+    private final @Ontology(values={OntologyValue.FORCE}) Vector3 angularImpulseBody2;
 
     // Linear impulse applied to the first body
-    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 linearImpulseBody1;
+    private final @Ontology(values={OntologyValue.FORCE}) Vector3 linearImpulseBody1;
 
     // Linear impulse applied to the second body
-    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 linearImpulseBody2;
+    private final @Ontology(values={OntologyValue.FORCE}) Vector3 linearImpulseBody2;
 
     // Constructor
     public Impulse(Vector3 initLinearImpulseBody1, Vector3 initAngularImpulseBody1,

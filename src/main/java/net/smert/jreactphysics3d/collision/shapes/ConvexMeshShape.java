@@ -59,13 +59,13 @@ public class ConvexMeshShape extends CollisionShape {
     private int cachedSupportVertex;
 
     // Array with the vertices of the mesh
-    private final List<@Ontology(values={OntologyValue.POSITION_3D}) Vector3> vertices;
+    private final List<Vector3> vertices;
 
     // Mesh maximum bounds in the three local x, y and z directions
-    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 maxBounds;
+    private final @Ontology(values={OntologyValue.POSITION}) Vector3 maxBounds;
 
     // Mesh minimum bounds in the three local x, y and z directions
-    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 minBounds;
+    private final @Ontology(values={OntologyValue.POSITION}) Vector3 minBounds;
 
     // Adjacency list representing the edges of the mesh
     private final Map<Integer, List<Integer>> edgesAdjacencyList;

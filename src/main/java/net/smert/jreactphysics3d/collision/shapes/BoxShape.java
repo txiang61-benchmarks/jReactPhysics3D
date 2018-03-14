@@ -43,7 +43,7 @@ import ontology.qual.OntologyValue;
 public class BoxShape extends CollisionShape {
 
     // Extent sizes of the box in the x, y and z direction
-    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 extent;
+    private final @Ontology(values={OntologyValue.POSITION}) Vector3 extent;
 
     // Constructor
     public BoxShape(Vector3 extent, float margin) {

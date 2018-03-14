@@ -49,17 +49,17 @@ public class ConstraintSolverData {
     public final List<Quaternion> orientations;
 
     // Reference to the bodies positions
-    public final List<@Ontology(values={OntologyValue.POSITION_3D})Vector3> positions;
+    public final List<Vector3> positions;
 
     // Reference to the map that associates rigid body to their index
     // in the constrained velocities array
     public final Map<RigidBody, Integer> mapBodyToConstrainedVelocityIndex;
 
     // Array with the bodies angular velocities
-    public @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] angularVelocities;
+    public Vector3[] angularVelocities;
 
     // Array with the bodies linear velocities
-    public @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] linearVelocities;
+    public Vector3[] linearVelocities;
 
     // Constructor
     public ConstraintSolverData(List<Vector3> refPositions, List<Quaternion> refOrientations,

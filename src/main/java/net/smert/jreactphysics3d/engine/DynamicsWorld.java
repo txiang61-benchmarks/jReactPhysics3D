@@ -133,21 +133,21 @@ public class DynamicsWorld extends CollisionWorld {
     protected Timer timer;
 
     // Gravity vector of the world
-    protected @Ontology(values={OntologyValue.FORCE_3D}) Vector3 gravity;
+    protected Vector3 gravity;
 
     // Array of constrained angular velocities (state of the angular velocities
     // after solving the constraints)
-    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] constrainedAngularVelocities;
+    protected Vector3[] constrainedAngularVelocities;
 
     // Array of constrained linear velocities (state of the linear velocities
     // after solving the constraints)
-    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] constrainedLinearVelocities;
+    protected Vector3[] constrainedLinearVelocities;
 
     // Split angular velocities for the position contact solver (split impulse)
-    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] splitAngularVelocities;
+    protected Vector3[] splitAngularVelocities;
 
     // Split linear velocities for the position contact solver (split impulse)
-    protected @Ontology(values={OntologyValue.VELOCITY_3D}) Vector3[] splitLinearVelocities;
+    protected Vector3[] splitLinearVelocities;
 
     // Constructor
     public DynamicsWorld(Vector3 gravity, float timeStep) {

@@ -94,25 +94,25 @@ public class ContactManifoldSolver {
     public final Matrix3x3 inverseInertiaTensorBody2 = new Matrix3x3();
 
     // Point on body 1 where to apply the friction constraints
-    public final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 frictionPointBody1 = new Vector3();
+    public final @Ontology(values={OntologyValue.POSITION}) Vector3 frictionPointBody1 = new Vector3();
 
     // Point on body 2 where to apply the friction constraints
-    public final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 frictionPointBody2 = new Vector3();
+    public final @Ontology(values={OntologyValue.POSITION}) Vector3 frictionPointBody2 = new Vector3();
 
     // First friction direction at contact manifold center
-    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector1 = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE}) Vector3 frictionVector1 = new Vector3();
 
     // Second friction direction at contact manifold center
-    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector2 = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE}) Vector3 frictionVector2 = new Vector3();
 
     // Average normal vector of the contact manifold
     public final Vector3 normal = new Vector3();
 
     // Old 1st friction direction at contact manifold center
-    public final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 oldFrictionVector1 = new Vector3();
+    public final @Ontology(values={OntologyValue.POSITION}) Vector3 oldFrictionVector1 = new Vector3();
 
     // Old 2nd friction direction at contact manifold center
-    public final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 oldFrictionVector2 = new Vector3();
+    public final @Ontology(values={OntologyValue.POSITION}) Vector3 oldFrictionVector2 = new Vector3();
 
     // Cross product of r1 with 1st friction vector
     public final Vector3 r1CrossT1 = new Vector3();
@@ -127,9 +127,9 @@ public class ContactManifoldSolver {
     public final Vector3 r2CrossT2 = new Vector3();
 
     // R1 vector for the friction constraints
-    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 r1Friction = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE}) Vector3 r1Friction = new Vector3();
 
     // R2 vector for the friction constraints
-    public final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 r2Friction = new Vector3();
+    public final @Ontology(values={OntologyValue.FORCE}) Vector3 r2Friction = new Vector3();
 
 }

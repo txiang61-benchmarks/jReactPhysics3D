@@ -73,10 +73,10 @@ public class ContactManifold {
     private final ContactPoint[] contactPoints = new ContactPoint[MAX_CONTACT_POINTS_IN_MANIFOLD];
 
     // First friction vector of the contact manifold
-    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector1 = new Vector3();
+    private final @Ontology(values={OntologyValue.FORCE}) Vector3 frictionVector1 = new Vector3();
 
     // Second friction vector of the contact manifold
-    private final @Ontology(values={OntologyValue.FORCE_3D}) Vector3 frictionVector2 = new Vector3();
+    private final @Ontology(values={OntologyValue.FORCE}) Vector3 frictionVector2 = new Vector3();
 
     // Constructor
     public ContactManifold(CollisionBody body1, CollisionBody body2) {

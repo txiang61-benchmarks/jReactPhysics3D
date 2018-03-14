@@ -38,10 +38,10 @@ import ontology.qual.OntologyValue;
 public class AABB {
 
     // Maximum world coordinates of the AABB on the x,y and z axis
-    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 mMaxCoordinates;
+    private final @Ontology(values={OntologyValue.POSITION}) Vector3 mMaxCoordinates;
 
     // Minimum world coordinates of the AABB on the x,y and z axis
-    private final @Ontology(values={OntologyValue.POSITION_3D}) Vector3 mMinCoordinates;
+    private final @Ontology(values={OntologyValue.POSITION}) Vector3 mMinCoordinates;
 
     // Constructor
     public AABB() {
