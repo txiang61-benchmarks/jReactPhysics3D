@@ -297,11 +297,16 @@ public class ConvexMeshShape extends CollisionShape {
                 assert (edgesAdjacencyList.get(maxVertex).size() > 0);
 
                 // For all neighbors of the current vertex
-                Iterator it = edgesAdjacencyList.get(maxVertex).iterator();
+
+                // Raw iterator causes unsat in inference because we don't generate a qualifier
+                // variable for the type arg. Instead, it is assumed that the type argument is
+                // @Top Object
+                // fix: don't use raw iterator
+                Iterator<Integer> it = edgesAdjacencyList.get(maxVertex).iterator();
                 while (it.hasNext()) {
-                    int i = (int) it.next();
+                    int i = (int) it.next();    // here
                     // Compute the dot product
-                    float dotProduct = direction.dot(vertices.get(i));
+                    float dotProduct = direction.dot(vertices.get(i));  // here
 
                     // If the current vertex is a better vertex (larger dot product)
                     if (dotProduct > maxDotProduct) {
