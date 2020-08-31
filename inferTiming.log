@@ -1,0 +1,41 @@
+Enter directory: /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D
+Cleaning project with command ['mvn', '-B', 'clean']
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< net.smert:jReactPhysics3D >----------------------
+[INFO] Building jReactPhysics3D 0.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jReactPhysics3D ---
+[INFO] Deleting /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D/target
+[INFO] 
+[INFO] --- license-maven-plugin:2.6:format (default) @ jReactPhysics3D ---
+[INFO] Updating license headers...
+[WARNING] Unknown file extension: /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D/logs/dljc.cache
+[WARNING] Unknown file extension: /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D/inferTiming.log
+[INFO] Updating license header in: /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D/logs/build_output.txt
+[WARNING] Unknown file extension: /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D/logs/toplevel.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.427 s
+[INFO] Finished at: 2020-08-31T03:56:11-04:00
+[INFO] ------------------------------------------------------------------------
+Cleaning done.
+Running command: ['/home/opprop/units-inference/scripts/run-dljc-infer.sh', 'true', 'mvn -B -DskipTests compile']
+============ Important variables =============
+JSR308: /home/opprop
+CLASSPATH: /home/opprop/units-inference/build/classes/java/main:/home/opprop/units-inference/build/resources/main:/home/opprop/units-inference/build/libs/units-inference.jar
+build cmd: mvn -B -DskipTests compile
+infer cmd: python /home/opprop/do-like-javac/dljc -t inference --guess --crashExit --checker units.UnitsChecker --solver units.solvers.backend.UnitsSolverEngine --solverArgs=solver=Z3smt,optimizingMode=true,collectStatistics=true,writeSolutions=true,noAppend=false -o logs -m ROUNDTRIP -afud /home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D/annotated -- mvn -B -DskipTests compile 
+=============================================
+{'TERM': 'xterm', 'JAVA_TOOL_OPTIONS': '-Dfile.encoding=UTF8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SHLVL': '3', 'AFU': '/home/opprop/annotation-tools/annotation-file-utilities', 'OLDPWD': '/home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D', 'HOSTNAME': '9ca410e9e0b0', 'CLASSPATH': '/home/opprop/units-inference/build/classes/java/main:/home/opprop/units-inference/build/resources/main:/home/opprop/units-inference/build/libs/units-inference.jar', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'DYLD_LIBRARY_PATH': '/home/opprop/checker-framework-inference/lib', 'PUNITS': '/home/opprop/units-inference', 'PWD': '/home/opprop/units-inference/benchmarks/paper-annotation/jReactPhysics3D', 'CHECKERFRAMEWORK': '/home/opprop/checker-framework', 'external_checker_classpath': '/home/opprop/units-inference/build/classes/java/main:/home/opprop/units-inference/build/resources/main:/home/opprop/units-inference/build/libs/units-inference.jar', 'HOME': '/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LD_LIBRARY_PATH': '/home/opprop/checker-framework-inference/lib', '_': '/usr/bin/python', 'PATH': '/home/opprop/annotation-tools/annotation-file-utilities/scripts:/home/opprop/z3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'}
+---- Reminder: do not forget to clean up the project! ----
+Return code is 0.
+Time taken by jReactPhysics3D: 	981.870246172	 seconds
